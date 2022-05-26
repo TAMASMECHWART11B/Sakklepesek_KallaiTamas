@@ -53,6 +53,7 @@ namespace Sakklepesek_KállaiTamásMiklós
             for (int i = 0; i < 2; i++)
             {
                 ablak.RowDefinitions.Add(new RowDefinition());
+                ablak.ColumnDefinitions.Add(new ColumnDefinition());
 
             }
             ComboBox vbabu = new ComboBox();
@@ -65,6 +66,7 @@ namespace Sakklepesek_KállaiTamásMiklós
             vbabu.Items.Add("Fehér paraszt");
             ablak.Children.Add(vbabu);
             Grid.SetRow(vbabu, 0);
+            Grid.SetColumn(vbabu, 0);
             vbabu.Height = 30;
             vbabu.Width = 100;
             vbabu.HorizontalAlignment = HorizontalAlignment.Center;
@@ -76,12 +78,14 @@ namespace Sakklepesek_KállaiTamásMiklós
                 tabla.ColumnDefinitions.Add(new ColumnDefinition());
 
             }
-            tabla.Width = 600;
-            tabla.Height = 600;
+            tabla.Width = 400;
+            tabla.Height = 400;
             tabla.HorizontalAlignment = HorizontalAlignment.Center;
             tabla.VerticalAlignment = VerticalAlignment.Top;
+            
             ablak.Children.Add(tabla);
             Grid.SetRow(tabla, 1);
+            Grid.SetColumn(tabla, 0);
 
         }
 
