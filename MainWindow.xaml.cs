@@ -20,7 +20,7 @@ namespace Sakklepesek_KállaiTamásMiklós
     /// </summary>
     public partial class MainWindow : Window
     {
-        Rectangle[,] tablaM;
+        Rectangle[,] mezok;
         Grid tabla;
         ComboBox valasztas;
         public MainWindow()
@@ -32,12 +32,25 @@ namespace Sakklepesek_KállaiTamásMiklós
 
         private void Tabla()
         {
+            mezok = new Rectangle[8, 8];
 
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    mezok[i, j] = new Rectangle();
+                    mezok[i, j].Stroke = Brushes.Black;
+                    mezok[i, j].Fill = (i + j) % 2 == 0 ? Brushes.White : Brushes.Black;
+                    tabla.Children.Add(mezok[i, j]);
+                    Grid.SetColumn(mezok[i, j], j);
+                    Grid.SetRow(mezok[i, j], i);
+                }
+            }
         }
 
         private void FelGeneral()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 ablak.RowDefinitions.Add(new RowDefinition());
 
@@ -52,6 +65,10 @@ namespace Sakklepesek_KállaiTamásMiklós
             vbabu.Items.Add("Fehér paraszt");
             ablak.Children.Add(vbabu);
             Grid.SetRow(vbabu, 0);
+            vbabu.Height = 30;
+            vbabu.Width = 100;
+            vbabu.HorizontalAlignment = HorizontalAlignment.Center;
+            vbabu.VerticalAlignment = VerticalAlignment.Center;
             tabla = new Grid();
             for (int i = 0; i < 10; i++)
             {
@@ -61,6 +78,8 @@ namespace Sakklepesek_KállaiTamásMiklós
             }
             tabla.Width = 600;
             tabla.Height = 600;
+            tabla.HorizontalAlignment = HorizontalAlignment.Center;
+            tabla.VerticalAlignment = VerticalAlignment.Top;
             ablak.Children.Add(tabla);
             Grid.SetRow(tabla, 1);
 
