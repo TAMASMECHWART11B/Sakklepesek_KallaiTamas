@@ -1,0 +1,15 @@
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\bin\Debug\Sakklepesek_KállaiTamásMiklós.exe.config
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\bin\Debug\Sakklepesek_KállaiTamásMiklós.exe
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\bin\Debug\Sakklepesek_KállaiTamásMiklós.pdb
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.csprojAssemblyReference.cache
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\MainWindow.g.cs
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\App.g.cs
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós_MarkupCompile.cache
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós_MarkupCompile.lref
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\MainWindow.baml
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.g.resources
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.Properties.Resources.resources
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.csproj.GenerateResource.cache
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.csproj.CoreCompileInputs.cache
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.exe
+C:\Users\tomika\Desktop\Sakklepesek_KallaiTamas\obj\Debug\Sakklepesek_KállaiTamásMiklós.pdb
