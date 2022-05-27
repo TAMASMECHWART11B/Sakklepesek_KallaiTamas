@@ -20,6 +20,17 @@ namespace Sakklepesek_KállaiTamásMiklós
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static class Babuk
+        {
+            public const string feherparaszt = "\u2659";
+            public const string feketeparaszt = "\u265f";
+            public const string bastya = "\u2656";
+            public const string futo = "\u2657";
+            public const string huszar = "\u2658";
+            public const string kiralyno = "\u265B";
+            public const string kiraly = "\u265A";
+        }
+
         Rectangle[,] mezok;
         Grid tabla;
         ComboBox valasztas;
@@ -146,6 +157,11 @@ namespace Sakklepesek_KállaiTamásMiklós
             koordinata.Width = 200;
             koordinata.HorizontalAlignment = HorizontalAlignment.Left;
             koordinata.VerticalAlignment = VerticalAlignment.Top;
+
+            if (valasztas.Text == "Fehér paraszt")
+            {
+                
+            }
             
             
 
