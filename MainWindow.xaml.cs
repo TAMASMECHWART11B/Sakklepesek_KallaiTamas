@@ -158,10 +158,7 @@ namespace Sakklepesek_KállaiTamásMiklós
             koordinata.HorizontalAlignment = HorizontalAlignment.Left;
             koordinata.VerticalAlignment = VerticalAlignment.Top;
 
-            if (valasztas.Text == "Fehér paraszt")
-            {
-                
-            }
+            
             
             
 
