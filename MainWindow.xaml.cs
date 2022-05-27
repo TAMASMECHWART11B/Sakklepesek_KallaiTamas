@@ -28,6 +28,7 @@ namespace Sakklepesek_KállaiTamásMiklós
             InitializeComponent();
             FelGeneral();
             Tabla();
+            
         }
 
         private void Tabla()
@@ -41,32 +42,20 @@ namespace Sakklepesek_KállaiTamásMiklós
                 betu.VerticalAlignment = VerticalAlignment.Top;
                 betu.Content = betuJel++;
                 tabla.Children.Add(betu);
-                Grid.SetRow(betu, 0);
-                Grid.SetColumn(betu, i);
+                Grid.SetRow(betu, 8);
+                Grid.SetColumn(betu, i - 1);
 
-                betu = new Label();
-                betu.HorizontalAlignment = HorizontalAlignment.Left;
-                betu.VerticalAlignment = VerticalAlignment.Top;
-                betu.Content = betuJel++;
-                tabla.Children.Add(betu);
-                Grid.SetRow(betu, 9);
-                Grid.SetColumn(betu, i);
+                
 
                 betu = new Label();
                 betu.HorizontalAlignment = HorizontalAlignment.Left;
                 betu.VerticalAlignment = VerticalAlignment.Top;
                 betu.Content = 9 - i;
                 tabla.Children.Add(betu);
-                Grid.SetRow(betu, i);
-                Grid.SetColumn(betu, 9);
+                Grid.SetRow(betu, i - 1);
+                Grid.SetColumn(betu, 8);
 
-                betu = new Label();
-                betu.HorizontalAlignment = HorizontalAlignment.Left;
-                betu.VerticalAlignment = VerticalAlignment.Top;
-                betu.Content = 9 - i;
-                tabla.Children.Add(betu);
-                Grid.SetRow(betu, i);
-                Grid.SetColumn(betu, 9);
+                
             }
             for (int i = 0; i < 8; i++)
             {
@@ -120,7 +109,7 @@ namespace Sakklepesek_KállaiTamásMiklós
             tabla.Width = 400;
             tabla.Height = 400;
             tabla.HorizontalAlignment = HorizontalAlignment.Center;
-            tabla.VerticalAlignment = VerticalAlignment.Top;
+            tabla.VerticalAlignment = VerticalAlignment.Bottom;
             
             ablak.Children.Add(tabla);
             Grid.SetRow(tabla, 1);
@@ -148,7 +137,25 @@ namespace Sakklepesek_KállaiTamásMiklós
                 }
             }
             mezok[xKordinata, yKordinata].Fill = Brushes.Red;
+            TextBox koordinata = new TextBox();
+            koordinata.Text = "Az adott mező koordinátája: " + xKordinata.ToString() +"; " +  yKordinata.ToString();
+            ablak.Children.Add(koordinata);
+            Grid.SetRow(koordinata, 1);
+            Grid.SetColumn(koordinata, 1);
+            koordinata.Height = 30;
+            koordinata.Width = 200;
+            koordinata.HorizontalAlignment = HorizontalAlignment.Left;
+            koordinata.VerticalAlignment = VerticalAlignment.Top;
+            
+            
+
+
+            
+            
+            
+            
         }
+        
 
 
     }

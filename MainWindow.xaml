@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sakklepesek_KállaiTamásMiklós"
         mc:Ignorable="d"
-        Title="Sakklépések - Kállai Tamás Miklós" Height="800" Width="850">
+        Title="Sakklépések - Kállai Tamás Miklós" Height="870" Width="850">
     <Grid x:Name="ablak">
         <Grid.RowDefinitions></Grid.RowDefinitions>
     </Grid>
