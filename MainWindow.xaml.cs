@@ -41,14 +41,16 @@ namespace Sakklepesek_KállaiTamásMiklós
                     mezok[i, j] = new Rectangle();
                     mezok[i, j].Stroke = Brushes.Black;
                     mezok[i, j].Fill = (i + j) % 2 == 0 ? Brushes.White : Brushes.Black;
+                    mezok[i, j].MouseUp += KattTabla;
                     tabla.Children.Add(mezok[i, j]);
+                    
                     Grid.SetColumn(mezok[i, j], j);
                     Grid.SetRow(mezok[i, j], i);
                 }
             }
         }
 
-        private void FelGeneral()
+        public void FelGeneral()
         {
             for (int i = 0; i < 2; i++)
             {
@@ -56,21 +58,22 @@ namespace Sakklepesek_KállaiTamásMiklós
                 ablak.ColumnDefinitions.Add(new ColumnDefinition());
 
             }
-            ComboBox vbabu = new ComboBox();
-            vbabu.Items.Add("Király");
-            vbabu.Items.Add("Vezér");
-            vbabu.Items.Add("Futó");
-            vbabu.Items.Add("Bástya");
-            vbabu.Items.Add("Huszár");
-            vbabu.Items.Add("Fekete paraszt");
-            vbabu.Items.Add("Fehér paraszt");
-            ablak.Children.Add(vbabu);
-            Grid.SetRow(vbabu, 0);
-            Grid.SetColumn(vbabu, 0);
-            vbabu.Height = 30;
-            vbabu.Width = 100;
-            vbabu.HorizontalAlignment = HorizontalAlignment.Center;
-            vbabu.VerticalAlignment = VerticalAlignment.Center;
+            valasztas = new ComboBox();
+            
+            valasztas.Items.Add("Király");
+            valasztas.Items.Add("Vezér");
+            valasztas.Items.Add("Futó");
+            valasztas.Items.Add("Bástya");
+            valasztas.Items.Add("Huszár");
+            valasztas.Items.Add("Fekete paraszt");
+            valasztas.Items.Add("Fehér paraszt");
+            ablak.Children.Add(valasztas);
+            Grid.SetRow(valasztas, 0);
+            Grid.SetColumn(valasztas, 0);
+            valasztas.Height = 30;
+            valasztas.Width = 100;
+            valasztas.HorizontalAlignment = HorizontalAlignment.Center;
+            valasztas.VerticalAlignment = VerticalAlignment.Center;
             tabla = new Grid();
             for (int i = 0; i < 10; i++)
             {
@@ -87,6 +90,28 @@ namespace Sakklepesek_KállaiTamásMiklós
             Grid.SetRow(tabla, 1);
             Grid.SetColumn(tabla, 0);
 
+        }
+
+        public void KattTabla(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle aktualis = sender as Rectangle;
+
+            int xKordinata = 0;
+            int yKordinata = 0;
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (mezok[i, j].Equals(aktualis))
+                    {
+                        xKordinata = i;
+                        yKordinata = j;
+                    }
+                    mezok[i, j].Fill = (i + j) % 2 == 0 ? Brushes.White : Brushes.Black;
+                }
+            }
+            mezok[xKordinata, yKordinata].Fill = Brushes.Red;
         }
 
 
