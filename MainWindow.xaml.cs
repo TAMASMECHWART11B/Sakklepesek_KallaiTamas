@@ -33,7 +33,41 @@ namespace Sakklepesek_KállaiTamásMiklós
         private void Tabla()
         {
             mezok = new Rectangle[8, 8];
+            char betuJel = 'A';
+            for (int i = 1; i < 9; i++)
+            {
+                Label betu = new Label();
+                betu.HorizontalAlignment = HorizontalAlignment.Left;
+                betu.VerticalAlignment = VerticalAlignment.Top;
+                betu.Content = betuJel++;
+                tabla.Children.Add(betu);
+                Grid.SetRow(betu, 0);
+                Grid.SetColumn(betu, i);
 
+                betu = new Label();
+                betu.HorizontalAlignment = HorizontalAlignment.Left;
+                betu.VerticalAlignment = VerticalAlignment.Top;
+                betu.Content = betuJel++;
+                tabla.Children.Add(betu);
+                Grid.SetRow(betu, 9);
+                Grid.SetColumn(betu, i);
+
+                betu = new Label();
+                betu.HorizontalAlignment = HorizontalAlignment.Left;
+                betu.VerticalAlignment = VerticalAlignment.Top;
+                betu.Content = 9 - i;
+                tabla.Children.Add(betu);
+                Grid.SetRow(betu, i);
+                Grid.SetColumn(betu, 9);
+
+                betu = new Label();
+                betu.HorizontalAlignment = HorizontalAlignment.Left;
+                betu.VerticalAlignment = VerticalAlignment.Top;
+                betu.Content = 9 - i;
+                tabla.Children.Add(betu);
+                Grid.SetRow(betu, i);
+                Grid.SetColumn(betu, 9);
+            }
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -48,6 +82,8 @@ namespace Sakklepesek_KállaiTamásMiklós
                     Grid.SetRow(mezok[i, j], i);
                 }
             }
+            
+
         }
 
         public void FelGeneral()
@@ -61,7 +97,7 @@ namespace Sakklepesek_KállaiTamásMiklós
             valasztas = new ComboBox();
             
             valasztas.Items.Add("Király");
-            valasztas.Items.Add("Vezér");
+            valasztas.Items.Add("Királyné");
             valasztas.Items.Add("Futó");
             valasztas.Items.Add("Bástya");
             valasztas.Items.Add("Huszár");
